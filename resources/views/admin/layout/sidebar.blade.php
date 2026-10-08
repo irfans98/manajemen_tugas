@@ -28,8 +28,8 @@
     </div>
 
     <!-- Nav Item - users -->
-    <li class="nav-item">
-        <a class="nav-link" href="#">
+    <li class="nav-item {{$menuUser ?? ''}}">
+        <a class="nav-link" href="{{route('user')}}">
             <i class="fas fa-users"></i>
             <span>User</span></a>
     </li>
