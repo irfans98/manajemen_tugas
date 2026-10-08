@@ -14,3 +14,15 @@
 
 <!-- Page level custom scripts -->
 <script src="{{asset ('sbadmin2/js/demo/datatables-demo.js')}}"></script>
+{{-- sweetalert --}}
+<script src="{{asset ('sweetalert2/dist/sweetalert2.all.min.js')}}"></script>
+{{-- session diatur di authcontroller --}}
+@session('success')
+<script>
+    Swal.fire({
+        title: "Sukses",
+        text: "{{ session('success') }}",
+        icon: "success"
+    });
+</script>
+@endsession

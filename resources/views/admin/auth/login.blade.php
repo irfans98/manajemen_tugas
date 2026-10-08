@@ -40,14 +40,21 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4"><b>Login</b> M-Tugas</h1>
                                     </div>
-                                    <form class="user">
+                                    <form class="user" method="POST" action="{{route('loginProses')}}">
+                                        @csrf
                                         <div class="form-group">
-                                            <input type="email" class="form-control form-control-user"
+                                            <input type="email" class="form-control form-control-user @error('email') is-invalid @enderror"
                                                 placeholder="Masukkan Email" name="email">
+                                            @error('email')
+                                                <small class="text-danger">{{$message}}</small>
+                                            @enderror
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user"
+                                            <input type="password" class="form-control form-control-user @error('password') is-invalid @enderror"
                                                 placeholder="Masukkan Password" name="password" id="password">
+                                            @error('password')
+                                                <small class="text-danger">{{$message}}</small>
+                                            @enderror
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
@@ -55,9 +62,9 @@
                                                 <label class="custom-control-label" for="customCheck">Lihat Password</label>
                                             </div>
                                         </div>
-                                        <a href="index.html" class="btn btn-primary btn-user btn-block">
+                                        <button type="submit" class="btn btn-primary btn-user btn-block">
                                             Login
-                                        </a>
+                                        </button>
                                     </form>
                                     <hr>
                                     <div class="text-center">
@@ -98,6 +105,28 @@
         }
     } 
     </script>
+    {{-- sweetalert --}}
+    <script src="{{asset ('sweetalert2/dist/sweetalert2.all.min.js')}}"></script>
+    
+    {{-- session diatur di authcontroller --}}
+    @session('success')
+    <script>
+        Swal.fire({
+            title: "Sukses",
+            text: "{{ session('success') }}",
+            icon: "success"
+        });
+    </script>
+    @endsession
+    @session('error')
+    <script>
+        Swal.fire({
+            title: "Gagal",
+            text: "{{ session('error') }}",
+            icon: "error"
+        });
+    </script>
+    @endsession
 
 </body>
 
