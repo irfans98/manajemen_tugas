@@ -24,8 +24,9 @@
                         <tr class="text-center">
                             <th>No</th>
                             <th>Nama</th>
-                            <th>Jabatan</th>
-                            <th>Status</th>
+                            <th>Tugas</th>
+                            <th>Tanggal Mulai</th>
+                            <th>Tanggal Selesai</th>
                             <th><i class="fas fa-cog"></i></th>
                         </tr>
                     </thead>
@@ -33,11 +34,12 @@
                         <tr>
                             <td class="text-center">1</td>
                             <td>Donna Snider</td>
+                            <td>Donna Snider</td>
                             <td class="text-center">
-                                <span class="badge badge-info badge-pill">Admin</span>
+                                <span class="badge badge-info badge-pill">12-01-2026</span>
                             </td>
                             <td class="text-center">
-                                <span class="badge badge-danger badge-pill">Belum Ditugaskan</span>
+                                <span class="badge badge-info badge-pill">13-01-2026</span>
                             </td>
                             <td class="text-center">
                                 <a href="#" class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></a>

@@ -35,8 +35,8 @@
     </li>
 
     <!-- Nav Item - tugas -->
-    <li class="nav-item">
-        <a class="nav-link" href="#">
+    <li class="nav-item {{$menuAdminTugas ?? ''}}">
+        <a class="nav-link" href="{{route('tugas')}}">
             <i class="fas fa-tasks"></i>
             <span>Data Tugas</span></a>
     </li>

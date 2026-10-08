@@ -9,6 +9,7 @@ class userController extends Controller
     public function index(){
         $data = [
             'title'             => 'Users',
+            'subtitle'          => 'Data User',
             'menuAdminUser'     => 'active',
         ];
 
