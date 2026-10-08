@@ -16,7 +16,7 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
-        <a class="btn-getstarted" href="#">Login</a>
+        <a class="btn-getstarted" href="{{route('login')}}">Login</a>
 
     </div>
 </header>

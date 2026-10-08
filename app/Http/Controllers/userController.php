@@ -8,10 +8,10 @@ class userController extends Controller
 {
     public function index(){
         $data = [
-            'title'     => 'Users',
-            'menuUser'  => 'active',
+            'title'             => 'Users',
+            'menuAdminUser'     => 'active',
         ];
 
-        return view('admin.user', $data);
+        return view('admin.user.index', $data);
     }
 }

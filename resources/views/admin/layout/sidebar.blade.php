@@ -28,7 +28,7 @@
     </div>
 
     <!-- Nav Item - users -->
-    <li class="nav-item {{$menuUser ?? ''}}">
+    <li class="nav-item {{$menuAdminUser ?? ''}}">
         <a class="nav-link" href="{{route('user')}}">
             <i class="fas fa-users"></i>
             <span>User</span></a>
