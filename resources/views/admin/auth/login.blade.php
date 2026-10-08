@@ -47,11 +47,11 @@
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
-                                                placeholder="Masukkan Password" name="password">
+                                                placeholder="Masukkan Password" name="password" id="password">
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck">
+                                                <input type="checkbox" onclick="showHide()" class="custom-control-input" id="customCheck">
                                                 <label class="custom-control-label" for="customCheck">Lihat Password</label>
                                             </div>
                                         </div>
@@ -87,6 +87,17 @@
 
     <!-- Custom scripts for all pages-->
     <script src="{{asset ('sbadmin2/js/sb-admin-2.min.js') }}"></script>
+    {{-- show password --}}
+    <script type="text/javascript">
+        function showHide() {
+        var inputan = document.getElementById("password");
+        if (inputan.type === "password") {
+            inputan.type = "text";
+        } else {
+            inputan.type = "password";
+        }
+    } 
+    </script>
 
 </body>
 
